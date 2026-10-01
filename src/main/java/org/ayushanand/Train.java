@@ -60,7 +60,7 @@ public class Train {
         return Collections.unmodifiableList(stationList);
     }
 
-    public void addStation(int position,Station station){
+    void addStation(int position,Station station){
         if(station == null) {
             throw new IllegalArgumentException("Station is invalid");
         }
@@ -72,7 +72,7 @@ public class Train {
             throw new IllegalArgumentException("Invalid Position");
 
     }
-    public void removeStation(int position){
+    void removeStation(int position){
         if( position < 0 || position >= stationList.size()){
             throw new IllegalArgumentException("Invalid position for removal");
         }
